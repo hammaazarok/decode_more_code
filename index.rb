@@ -13,7 +13,8 @@ def decode_char(char)
 end
 
 def decode_word(word)
-  words = word.split
+  spaces = ' '
+  words = word.split(spaces)
   result = ''
   words.each do |i|
     result += decode_char(i)
@@ -22,7 +23,8 @@ def decode_word(word)
 end
 
 def decode(sentence)
-  sentences = sentence.split
+  spaces = '  '
+  sentences = sentence.split(spaces)
   result = ''
   sentences.each do |i|
     result += "#{decode_word(i)} "
